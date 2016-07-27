@@ -14,15 +14,9 @@ public class Anagram {
 
     public static String sortWord(String word){
         String sortedWord = "";
-        ArrayList<Character>AlphabetList = new ArrayList<>();
-        for(int i = 0; i < word.length(); i++){
-            AlphabetList.add(word.charAt(i));
-        }
-        Collections.sort(AlphabetList);
-        for (char alphabet : AlphabetList){
-            sortedWord += String.valueOf(alphabet);
-        }
-
+        char[] alphabets = word.toCharArray();
+        Arrays.sort(alphabets);
+        sortedWord = new String(alphabets);
         return sortedWord;
     }
 

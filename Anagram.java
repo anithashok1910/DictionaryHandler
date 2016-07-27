@@ -13,11 +13,10 @@ public class Anagram {
     }
 
     public static String sortWord(String word){
-        String sortedWord = "";
+        word = word.toLowerCase();
         char[] alphabets = word.toCharArray();
         Arrays.sort(alphabets);
-        sortedWord = new String(alphabets);
-        return sortedWord;
+        return (new String(alphabets));
     }
 
     public static String displayAnagrams(HashMap<String,String> anagrams){
